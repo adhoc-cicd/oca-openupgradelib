@@ -86,7 +86,7 @@ if version_info[0] > 6 or version_info[0:2] == (6, 1):
         many2many = core.osv.fields.many2many
         one2many = core.osv.fields.one2many
 
-    WarningError = core.exceptions.Warning
+    WarningError = core.exceptions.UserError
     if version_info[0] >= 7:
         plaintext2html = tools.mail.plaintext2html
     if version_info[0] >= 8:
