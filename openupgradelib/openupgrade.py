@@ -329,7 +329,7 @@ def load_data(env_or_cr, module_name, filename, idref=None, mode="init"):
     pathname = os.path.join(module_name, filename)
 
     try:
-        fp = tools.file_open(pathname)
+        fp = tools.file_open(pathname, 'rb')
     except OSError:
         if tools.config.get("upgrade_path"):
             for path in tools.config["upgrade_path"].split(","):
